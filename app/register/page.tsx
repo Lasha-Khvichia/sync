@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { userSchema } from "./registerSchema";
 import styles from "./page.module.scss";
+import Link from "next/link";
 
 type Inputs = {
   email: string;
@@ -93,9 +94,13 @@ export default function Register() {
             <button type="submit" className={styles.formButton}>
               Register
             </button>
+
+            <Link href="/login" className={styles.formLink}>
+              Already have an account? <span className={styles.formLinkSpan}>Login</span>
+            </Link>
           </form>
-        </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }
