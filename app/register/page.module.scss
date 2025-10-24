@@ -1,4 +1,4 @@
-@use "../(main)/hellpers.scss" as *;
+@import "../helpers.scss";
 .mainContainer {
   max-width: 2000px;
   width: 100%;
