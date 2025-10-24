@@ -1,12 +1,9 @@
-import "..//globals.css";
+import '../globals.css';
 
-export default function LoginLayout ({children}: {children: React.ReactNode}) {
-
-    return(
-       <html>
-        <body>
-            {children}
-        </body>
-       </html>
+export default function LoginLayout({ children }: { children: React.ReactNode }) {
+    return (
+      <div className="register-wrapper">
+        {children}
+      </div>
     )
-}
+  }
