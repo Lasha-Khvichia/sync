@@ -1,1 +1,83 @@
-@use "../../hellpers.scss" as *;
+@use "../../../app/(main)/hellpers.scss" as *;
+
+.navigationWrapper{
+     max-width: 300px;
+     width: 100%;
+     height: 100%;
+     padding: 10px;
+    
+}
+
+.navigationContent{
+     display: flex;
+     align-items: center;
+     width: 100%;
+     height: 100%;
+     flex-direction: column;
+     justify-content: space-between;
+}
+.navigationHeader{
+     width: 100%;
+     height: 400px;
+     display: flex;
+     align-items: flex-start;
+     flex-direction: column;
+     gap: 15px;
+    
+}
+ 
+.logoImage{
+     width: 80px;
+     height: 80px;
+}
+.navigationMenuList{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.navigationMenuItem{
+     width: 250px;
+     height: 45px;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     padding: 15px;
+     background-color: $light-background;
+     border-radius: $border-radius;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     
+     img {
+         width: 30px;
+         height: 30px;
+     }
+     
+     a {
+         text-decoration: none;
+         color: inherit;
+         font-size: 16px;
+         font-weight: 600;
+     }
+}
+
+.navigationMenuItem:hover{
+     background-color: $primary-color;
+     color: $white-color;
+}
+.navigationMenuItem:active{
+     background-color: $primary-color-active;
+     color: $white-color;
+}
+
+
+
+
+
+.navigationFooter{
+     width: 100%;
+     height: 150px;
+     display: flex;
+     align-items: center;
+    
+}
