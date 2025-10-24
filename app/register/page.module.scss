@@ -102,3 +102,10 @@
 .formButton:active{
   background-color: $primary-color-active;
 }
+
+.errorMessage{
+  color: red;
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 10px;
+}
