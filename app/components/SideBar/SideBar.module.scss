@@ -1,1 +1,126 @@
-@use "../../hellpers.scss" as *;
+@use "../../../app/(main)/hellpers.scss" as *;
+
+.sideBarWrapper {
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+}
+
+.sideBarContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sideBarHeader {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headlineIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.headlineTitle {
+  font-size: 35px;
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.search {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.searchIcon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 30px;
+  padding-left: 40px;
+  background-color: $light-background;
+}
+
+.sideBarBody {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.messageBox {
+  width: 100%;
+  height: 60px;
+  background-color: $light-background;
+  border-radius: 100px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.messageBox:hover {
+  background-color: $primary-color;
+}
+.avatrName {
+  color: #000;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.avatarMessage {
+  color: #696969;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+}
