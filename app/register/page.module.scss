@@ -83,6 +83,28 @@
   padding-left: 15px;
 }
 
+.passwordGroup {
+  display: flex;
+  align-items: center;
+  
+  gap: 10px;
+}
+.formInputPassword{
+  width: 245px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px solid $light-background;
+  padding-left: 15px;
+}
+.formInput:placeholder-shown{
+  padding-left: 15px;
+}
+
+
+
+
+
+
 .formButton{
   width: 100%;
   height: 55px;
@@ -114,3 +136,5 @@
 .formLinkSpan{
   color: $primary-color;
 }
+
+

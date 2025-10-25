@@ -1,6 +1,7 @@
 import { object, string, ref } from 'yup';
 
 export const userSchema = object({
+  Name: string().required('Name is required'),
   email: string()
     .email('Please enter a valid email')
     .matches(/@gmail\.com$/, 'Email must be a Gmail address')
