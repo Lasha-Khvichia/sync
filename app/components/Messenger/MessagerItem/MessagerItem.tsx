@@ -9,7 +9,7 @@ export default function MessagerItem() {
                     <img src="/avatar.png" alt="avatar" className={styles.avatarImg} />
                 </div>
                 <div className={styles.messagerItemContentText}>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum quibusdam quae autem quidem aliquam facere.</p>
+                    <p> აქანე უნდა იყოს შემავალი ტექსტი  გაგზავნის შემდგომ </p>
                 </div>
             </div>
 
