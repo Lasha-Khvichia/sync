@@ -2,6 +2,8 @@
 
 import MessagerItem from "./MessagerItem/MessagerItem";
 import styles from "./Messenger.module.scss";
+import { Send } from 'lucide-react'; 
+
 
 export default function Messenger() {
   return (
@@ -29,31 +31,52 @@ export default function Messenger() {
       </div>
 
       <div className={styles.messengerCenter}>
-         <MessagerItem />
-
+        <MessagerItem />
       </div>
 
       <div className={styles.messengerFooter}>
         <div className={styles.Footericons}>
           <button className={styles.btn}>
-            <img src="/icons/slbum.svg" alt="video" className={styles.iconImg} />
+            <img
+              src="/icons/slbum.svg"
+              alt="video"
+              className={styles.iconImg}
+            />
           </button>
           <button className={styles.btn}>
-            <img src="/icons/photo.svg" alt="video"  className={styles.iconImg} />
+            <img
+              src="/icons/photo.svg"
+              alt="video"
+              className={styles.iconImg}
+            />
           </button>
           <button className={styles.btn}>
-            <img src="/icons/voice.svg" alt="video"  className={styles.iconImg} />
+            <img
+              src="/icons/voice.svg"
+              alt="video"
+              className={styles.iconImg}
+            />
           </button>
         </div>
 
         <div className={styles.messengerinput}>
-            <input type="text" placeholder="Type a message" className={styles.input}/>
+          <input
+            type="text"
+            placeholder="Type a message"
+            className={styles.input}
+          />
         </div>
 
-
         <div className={styles.lasticons}>
+          <button className={styles.sendbtn}>
+             <Send />
+          </button> 
           <button className={styles.btn}>
-            <img src="/icons/emoji.svg" alt="video"   className={styles.iconImg}/>
+            <img
+              src="/icons/emoji.svg"
+              alt="video"
+              className={styles.iconImg}
+            />
           </button>
         </div>
       </div>
