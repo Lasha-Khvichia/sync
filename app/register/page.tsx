@@ -46,7 +46,7 @@ export default function Register() {
                 type="Name"
                 id="Name"
                 name="Name"
-                placeholder="enter your email"
+                placeholder="enter your name"
               />
               {errors.Name && (
                 <span className={styles.errorMessage}>
