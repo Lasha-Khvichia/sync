@@ -36,12 +36,12 @@ export default function Navigation() {
         </div>
 
         <div className={styles.navigationFooter}>
-          <ul className={styles.navigationMenuList}>
-            <li className={styles.navigationMenuItem}>
-              <img src="/icons/logout.svg" alt="logout" />
-              <Link href="/">Logout</Link>
-            </li>
-          </ul>
+                     <ul className={styles.navigationMenuList}>
+             <li className={styles.navigationMenuItem}>
+               <img src="/Icons/logOut.svg" alt="logout" />
+               <Link href="/">Logout</Link>
+             </li>
+           </ul>
         </div>
       </div>
     </section>
