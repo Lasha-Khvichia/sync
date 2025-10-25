@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "./page.module.scss";
 import Link from "next/link";
 import { userSchema } from "./loginSchema";
+import Buttons from "../components/Buttons/Buttons";
 
 type Inputs = {
   email: string;
@@ -73,9 +74,7 @@ export default function Login() {
             </div>
  
 
-            <button type="submit" className={styles.formButton}>
-              Register
-            </button>
+            <Buttons title="Log In" type="submit" className="primary"/>
 
             <Link href="/register" className={styles.formLink}>
               you don't have an account? <span className={styles.formLinkSpan}>Register</span>
