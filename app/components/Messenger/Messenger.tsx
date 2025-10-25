@@ -1,11 +1,20 @@
 "use client";
-
+import { useState } from "react";
 import MessagerItem from "./MessagerItem/MessagerItem";
 import styles from "./Messenger.module.scss";
-import { Send } from 'lucide-react'; 
-
+import { Send } from "lucide-react";
 
 export default function Messenger() {
+  const [showVoceSec, setShowVoceSec] = useState(false);
+
+  const handleShowVoceSec = () => {
+    setShowVoceSec(true);
+  };
+
+  const handleHideVoceSec = () => {
+    setShowVoceSec(false);
+  };
+
   return (
     <section className={styles.messengerWrapper}>
       <div className={styles.messengerHeader}>
@@ -50,16 +59,27 @@ export default function Messenger() {
               className={styles.iconImg}
             />
           </button>
-          <button className={styles.btn}>
-            <img
-              src="/icons/voice.svg"
-              alt="video"
-              className={styles.iconImg}
-            />
-          </button>
-        </div>
 
-        <div className={styles.messengerinput}>
+          <div className={styles.btn} onClick={handleShowVoceSec}>
+            {
+              showVoceSec ? (
+                <div className={styles.voceSec}>
+                  <p>00:00</p>
+                </div>
+              ) : (
+                <button className={styles.btn}>
+                  <img
+                    src="/icons/voice.svg"
+                    alt="video"
+                    className={styles.iconImg}
+                    />
+                  </button>
+                )
+              }
+            </div>
+          </div>
+
+          <div className={styles.messengerinput}>
           <input
             type="text"
             placeholder="Type a message"
@@ -68,9 +88,9 @@ export default function Messenger() {
         </div>
 
         <div className={styles.lasticons}>
-          <button className={styles.sendbtn}>
-             <Send />
-          </button> 
+          <button className={styles.sendbtn} onClick={handleHideVoceSec}>
+            <Send />
+          </button>
           <button className={styles.btn}>
             <img
               src="/icons/emoji.svg"
