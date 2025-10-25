@@ -1,0 +1,122 @@
+@use "../../../app/(main)/hellpers.scss" as *;
+
+.messengerWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.messengerHeader {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.messengerAvatar {
+  width: 260px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.avatarImage {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AvatarImg {
+  width: 50px;
+  height: 50px;
+}
+
+.messengerName {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.messengerName h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.messengericons {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.messengerCenter {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messengerFooter {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Footericons {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.iconImg {
+  width: 35px;
+  height: 35px;
+}
+.lasticons {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.messengerinput {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input{
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: $light-background;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
