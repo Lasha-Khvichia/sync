@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MessagerItem from "./MessagerItem/MessagerItem";
 import styles from "./Messenger.module.scss";
 import { Send } from "lucide-react";
 
 export default function Messenger() {
   const [showVoceSec, setShowVoceSec] = useState(false);
+  const [time, setTime] = useState(0);
+  let interval: NodeJS.Timeout;;
 
   const handleShowVoceSec = () => {
     setShowVoceSec(true);
@@ -14,6 +16,18 @@ export default function Messenger() {
   const handleHideVoceSec = () => {
     setShowVoceSec(false);
   };
+
+  useEffect(() => {
+    if (showVoceSec) {
+      interval = setInterval(() => {
+        setTime(time + 1);
+      }, 1000);
+    } else {
+      clearInterval(interval);
+      setTime(0);
+    }
+    return () => clearInterval(interval);
+  }, [time, showVoceSec,]);
 
   return (
     <section className={styles.messengerWrapper}>
@@ -61,25 +75,23 @@ export default function Messenger() {
           </button>
 
           <div className={styles.btn} onClick={handleShowVoceSec}>
-            {
-              showVoceSec ? (
-                <div className={styles.voceSec}>
-                  <p>00:00</p>
-                </div>
-              ) : (
-                <button className={styles.btn}>
-                  <img
-                    src="/icons/voice.svg"
-                    alt="video"
-                    className={styles.iconImg}
-                    />
-                  </button>
-                )
-              }
-            </div>
+            {showVoceSec ? (
+              <div className={styles.voceSec}>
+                <p>{time}</p>
+              </div>
+            ) : (
+              <button className={styles.btn}>
+                <img
+                  src="/icons/voice.svg"
+                  alt="video"
+                  className={styles.iconImg}
+                />
+              </button>
+            )}
           </div>
+        </div>
 
-          <div className={styles.messengerinput}>
+        <div className={styles.messengerinput}>
           <input
             type="text"
             placeholder="Type a message"
