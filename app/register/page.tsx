@@ -6,6 +6,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 
 type Inputs = {
+  Name: string;
   email: string;
   password: string;
   passwordConfirm: string;
@@ -34,6 +35,24 @@ export default function Register() {
           <h1 className={styles.formTitle}>Registration</h1>
 
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div className={styles.formGroup}>
+              <label htmlFor="Name" className={styles.formLabel}>
+              Name
+              </label>
+              <input
+                {...register("Name")}
+                className={styles.formInput}
+                type="Name"
+                id="Name"
+                name="Name"
+                placeholder="enter your email"
+              />
+              {errors.Name && (
+                <span className={styles.errorMessage}>
+                  {errors.Name.message}
+                </span>
+              )}
+            </div>
             <div className={styles.formGroup}>
               <label htmlFor="email" className={styles.formLabel}>
                 Email
@@ -53,42 +72,45 @@ export default function Register() {
               )}
             </div>
 
-            <div className={styles.formGroup}>
-              <label htmlFor="password" className={styles.formLabel}>
-                Pasword
-              </label>
-              <input
-                {...register("password")}
-                className={styles.formInput}
-                type="password"
-                id="password"
-                name="password"
-                placeholder="enter your password"
-              />
-              {errors.password && (
-                <span className={styles.errorMessage}>
-                  {errors.password.message}
-                </span>
-              )}
-            </div>
+            <div className={styles.passwordGroup}>
+              <div className={styles.formGroup}>
+                <label htmlFor="password" className={styles.formLabel}>
+                  Pasword
+                </label>
+                <input
+                  {...register("password")}
+                  className={styles.formInputPassword}
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="enter your password"
+                />
+                {errors.password && (
+                  <span className={styles.errorMessage}>
+                    {errors.password.message}
+                  </span>
+                )}
+              </div>
 
-            <div className={styles.formGroup}>
-              <label htmlFor="passwordConfirm" className={styles.formLabel}>
-                Confirm Password
-              </label>
-              <input
-                {...register("passwordConfirm")}
-                className={styles.formInput}
-                type="password"
-                id="passwordConfirm"
-                name="passwordConfirm"
-                placeholder="confirm your password"
-              />
-              {errors.passwordConfirm && (
-                <span className={styles.errorMessage}>
-                  {errors.passwordConfirm.message}
-                </span>
-              )}
+              <div className={styles.formGroup}>
+                <label htmlFor="passwordConfirm" className={styles.formLabel}>
+                  Confirm Password
+                </label>
+                <input
+                  {...register("passwordConfirm")}
+                  className={styles.formInputPassword}
+                  type="password"
+                  id="passwordConfirm"
+                  name="passwordConfirm"
+                  placeholder="confirm your password"
+                />
+                {errors.passwordConfirm && (
+                  <span className={styles.errorMessage}>
+                    {errors.passwordConfirm.message}
+                  </span>
+                )}
+              </div>
+
             </div>
 
             <button type="submit" className={styles.formButton}>
@@ -96,11 +118,12 @@ export default function Register() {
             </button>
 
             <Link href="/login" className={styles.formLink}>
-              Already have an account? <span className={styles.formLinkSpan}>Login</span>
+              Already have an account?{" "}
+              <span className={styles.formLinkSpan}>Login</span>
             </Link>
           </form>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 }
