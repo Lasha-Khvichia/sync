@@ -1,13 +1,25 @@
 @use "../../../../app/(main)/hellpers.scss" as *;
 
-.messagerItem{
-    width: 550px;
-    height: 60px;
-    background-color: $primary-color;
-    border-radius: 20px;
-    padding: 10px;
-}
-
+.messageItem {
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 12px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .myMessage {
+    margin-left: auto; // მარჯვნივ გადავიტანოთ
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+  }
+  
+  .otherMessage {
+    margin-right: auto; // მარცხნივ დავტოვოთ
+    background-color: #ffe228;
+    color: #333;
+  }
 .avatarImg{
     width: 40px;
     height: 40px;
